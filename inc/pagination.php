@@ -1,4 +1,5 @@
 <?php function portfolio_me_pagination() {
+
     the_posts_pagination( array(
         'mid_size' => 2,
         'prev_text' => __( 'Previous', 'portfolio-me' ),

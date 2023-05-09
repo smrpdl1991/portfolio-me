@@ -64,5 +64,6 @@
 				</div>
 			</div>
 		</div>
+        <?php echo get_theme_mod('footer2'); ?>
 	</header><!-- #masthead -->
 <div class="site-content">

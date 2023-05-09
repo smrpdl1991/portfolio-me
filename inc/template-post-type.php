@@ -37,7 +37,7 @@
         'has_archive'           => true,
         'hierarchical'          => false,
         'menu_position'         => 5,
-        'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+        'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt'),
         'menu_icon'             => 'dashicons-portfolio',
     );
 
