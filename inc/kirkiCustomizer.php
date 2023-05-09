@@ -4,58 +4,70 @@ new \Kirki\Panel(
 	'panel_id',
 	[
 		'priority'    => 10,
-		'title'       => esc_html__( 'My Panel', 'portfolio-me' ),
-		'description' => esc_html__( 'My Panel Description.', 'portfolio-me' ),
+		'title'       => esc_html__( 'Sections', 'portfolio-me' ),
+		'description' => esc_html__( 'All the sections listed here.', 'portfolio-me' ),
+	]
+);
+
+//sections 
+
+new \Kirki\Section(
+	'aboutus_id',
+	[
+		'title'       => esc_html__( 'About US', 'portfolio-me' ),
+		'description' => esc_html__( 'About Us Section', 'portfolio-me' ),
+		'panel'       => 'panel_id',
+		'priority'    => 1,
+	]
+);
+new \Kirki\Section(
+	'education_id',
+	[
+		'title'       => esc_html__( 'Education', 'portfolio-me' ),
+		'description' => esc_html__( 'Education Info', 'portfolio-me' ),
+		'panel'       => 'panel_id',
+		'priority'    => 2,
+	]
+);
+new \Kirki\Section(
+	'Experience_id',
+	[
+		'title'       => esc_html__( 'Skills & Experience', 'portfolio-me' ),
+		'description' => esc_html__( 'Skills & Experience', 'portfolio-me' ),
+		'panel'       => 'panel_id',
+		'priority'    => 3,
 	]
 );
 
 new \Kirki\Section(
-	'section_id',
+	'we-work-with',
 	[
-		'title'       => esc_html__( 'My Section', 'portfolio-me' ),
-		'description' => esc_html__( 'My Section Description.', 'portfolio-me' ),
+		'title'       => esc_html__( 'What We Do', 'portfolio-me' ),
+		'description' => esc_html__( 'Design , Development and otheres', 'portfolio-me' ),
 		'panel'       => 'panel_id',
-		'priority'    => 160,
+		'priority'    => 4,
 	]
 );
 
-new \Kirki\Field\Repeater(
+new \Kirki\Section(
+	'my-process',
 	[
-		'settings'     => 'repeater_setting_2',
-		'label'        => esc_html__( 'Repeater Control', 'portfolio-me' ),
-		'section'      => 'section_id',
-		'priority'     => 10,
-		'row_label'    => [
-			'type'  => 'field',
-			'value' => esc_html__( 'Your Custom Value', 'portfolio-me' ),
-			'field' => 'link_text',
-		],
-		'button_label' => esc_html__( '"Add new" button label (optional) ', 'portfolio-me' ),
-		'default'      => [
-			[
-				'link_text'   => esc_html__( 'Kirki Site', 'portfolio-me' ),
-				'link_url'    => 'https://kirki.org/',
-			],
-			[
-				'link_text'   => esc_html__( 'Kirki WP', 'portfolio-me' ),
-				'link_url'    => 'https://wordpress.org/plugins/kirki/',
-			],
-		],
-		'fields'       => [
-			'link_text'   => [
-				'type'        => 'text',
-				'label'       => esc_html__( 'Link Text', 'portfolio-me' ),
-				'description' => esc_html__( 'Description', 'portfolio-me' ),
-				'default'     => '',
-			],
-			'link_url'    => [
-				'type'        => 'text',
-				'label'       => esc_html__( 'Link URL', 'portfolio-me' ),
-				'description' => esc_html__( 'Description', 'portfolio-me' ),
-				'default'     => '',
-			],
-		],
+		'title'       => esc_html__( 'My Process', 'portfolio-me' ),
+		'description' => esc_html__( 'Process of work', 'portfolio-me' ),
+		'panel'       => 'panel_id',
+		'priority'    => 5,
 	]
 );
 
+new \Kirki\Section(
+	'selected-work',
+	[
+		'title'       => esc_html__( 'Selected Work', 'portfolio-me' ),
+		'description' => esc_html__( 'Selected Work', 'portfolio-me' ),
+		'panel'       => 'panel_id',
+		'priority'    => 6,
+	]
+);
+
+require get_template_directory(). '/inc/kirkiCustomizerControl.php';
 ?>

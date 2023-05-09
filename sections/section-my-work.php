@@ -1,4 +1,4 @@
-<section class="section-my-work">
+<section class="section-my-work" id="section-my-work">
             <div class="container">
                 <div class="heading">
                     <h2 class="section-title">Selected Work</h2>
