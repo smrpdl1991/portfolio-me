@@ -47,6 +47,9 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 				<div class="navbar">
+					<div class="header-information">
+						<a href="" class="bttn bttn-black bttn-large">Contact Me</a>
+					</div>
 					<nav id="site-navigation" class="main-navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'portfolio-me' ); ?></button>
 						<?php
@@ -58,9 +61,6 @@
 						);
 						?>
 					</nav><!-- #site-navigation -->
-					<div class="header-information">
-						<a href="" class="bttn bttn-black bttn-large">Contact Me</a>
-					</div>
 				</div>
 			</div>
 		</div>

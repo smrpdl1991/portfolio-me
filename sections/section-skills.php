@@ -19,7 +19,7 @@
                         <div class="content">
                             <div class="accordian-title">
                                 <div class="experienced-at">
-                                    <h5>UX / Wireframing</h5>
+                                    <h4>UX / Wireframing</h4>
                                     <p>Webo Digital</p>
                                 </div>
                                 <div class="icon">
@@ -57,7 +57,7 @@
                         <div class="content">
                             <div class="accordian-title">
                                 <div class="experienced-at">
-                                    <h5>UX / Wireframing</h5>
+                                    <h4>UX / Wireframing</h4>
                                     <p>Webo Digital</p>
                                 </div>
                                 <div class="icon">
@@ -95,7 +95,7 @@
                         <div class="content">
                             <div class="accordian-title">
                                 <div class="experienced-at">
-                                    <h5>UX / Wireframing</h5>
+                                    <h4>UX / Wireframing</h4>
                                     <p>Webo Digital</p>
                                 </div>
                                 <div class="icon">

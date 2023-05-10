@@ -137,7 +137,9 @@ add_action( 'widgets_init', 'portfolio_me_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
 function portfolio_me_scripts() {
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap', array(), null );
 	wp_enqueue_style( 'portfolio-me-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'portfolio-me-style-main', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
 	wp_enqueue_style( 'portfolio-me-style-custom', get_template_directory_uri() . '/assets/css/custom-style.css', array(), _S_VERSION );
@@ -195,3 +197,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+?>

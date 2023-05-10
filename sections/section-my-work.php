@@ -9,37 +9,37 @@
                 <div class="section-wrap">
                     <div class="work-item">
                         <div class="item-headings">
-                            <h3>Project 1</h3>
+                            <h4>Project 1</h4>
                             <div class="desc">Project 1</div>
                         </div>
                         <div class="date">/22</div>
                         <div class="project-info">
                             <a href="">
-                                <img src="assets/image/ketan.png" alt="">
+                                <img src="assets/image/ketan.png" alt="">a
                             </a>
                         </div>
                     </div>
                     <div class="work-item">
                         <div class="item-headings">
-                            <h3>Project 1</h3>
+                            <h4>Project 1</h4>
                             <div class="desc">Project 1</div>
                         </div>
                         <div class="date">/22</div>
                         <div class="project-info">
                             <a href="">
-                                <img src="assets/image/ketan.png" alt="">
+                                <img src="assets/image/ketan.png" alt="">b
                             </a>
                         </div>
                     </div>
                     <div class="work-item">
                         <div class="item-headings">
-                            <h3>Project 1</h3>
+                            <h4>Project 1</h4>
                             <div class="desc">Project 1</div>
                         </div>
                         <div class="date">/22</div>
                         <div class="project-info">
                             <a href="">
-                                <img src="assets/image/ketan.png" alt="">
+                                <img src="assets/image/ketan.png" alt="">c
                             </a>
                         </div>
                     </div>

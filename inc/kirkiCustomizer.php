@@ -8,6 +8,23 @@ new \Kirki\Panel(
 		'description' => esc_html__( 'All the sections listed here.', 'portfolio-me' ),
 	]
 );
+new \Kirki\Panel(
+	'footer_id',
+	[
+		'priority'    => 10,
+		'title'       => esc_html__( 'Footer', 'portfolio-me' ),
+		'description' => esc_html__( 'Footer Field', 'portfolio-me' ),
+	]
+);
+new \Kirki\Panel(
+	'general_setting_panel',
+	[
+		'priority'    => 10,
+		'title'       => esc_html__( 'General settings', 'portfolio-me' ),
+		'description' => esc_html__( 'General Field', 'portfolio-me' ),
+	]
+);
+
 
 //sections 
 
@@ -66,6 +83,24 @@ new \Kirki\Section(
 		'description' => esc_html__( 'Selected Work', 'portfolio-me' ),
 		'panel'       => 'panel_id',
 		'priority'    => 6,
+	]
+);
+
+new \Kirki\Section(
+	'footer_section',
+	[
+		'title'       => esc_html__( 'Footer Setting', 'portfolio-me' ),
+		'description' => esc_html__( 'Footer Setting', 'portfolio-me' ),
+		'panel'       => 'footer_id',
+	]
+);
+
+new \Kirki\Section(
+	'general_setting_section',
+	[
+		'title'       => esc_html__( 'Header contact Us Button', 'portfolio-me' ),
+		'description' => esc_html__( 'General Settings of website', 'portfolio-me' ),
+		'panel'       => 'general_setting_panel',
 	]
 );
 

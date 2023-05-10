@@ -2,9 +2,11 @@
             <div class="container">
                 <div class="section-wrap">
                     <div class="section-left">
-                        <h2 class="section-title">Graphics Designs</h2>
-                        <p>I'm helping startups and business owners to make a visual statement through spotless Graphics
+                        <h2 class="section-title"><span>Graphics Designs<span></h2>
+                        <div class="desc">
+                            <p>I'm helping startups and business owners to make a visual statement through spotless Graphics
                             Design so they can increase brand awareness and sell more.</p>
+                        </div>
                     </div>
                     <div class="section-right">
                         <div class="specialized-in">

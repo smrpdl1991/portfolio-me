@@ -53,7 +53,7 @@ new \Kirki\Field\Background(
 		'section'     => 'aboutus_id',
 		'priority'     => 2,
 		'default'     => [
-			'background-color'      => 'rgba(20,20,20,.8)',
+			'background-color'      => '',
 			'background-image'      => '',
 			'background-repeat'     => 'no-repeat',
 			'background-position'   => 'center center',
@@ -121,7 +121,7 @@ new \Kirki\Field\Background(
 		'section'     => 'education_id',
 		'priority'     => 2,
 		'default'     => [
-			'background-color'      => 'rgba(20,20,20,.8)',
+			'background-color'      => '',
 			'background-image'      => '',
 			'background-repeat'     => 'no-repeat',
 			'background-position'   => 'center center',
@@ -205,7 +205,7 @@ new \Kirki\Field\Background(
 		'section'     => 'Experience_id',
 		'priority'     => 2,
 		'default'     => [
-			'background-color'      => 'rgba(20,20,20,.8)',
+			'background-color'      => '',
 			'background-image'      => '',
 			'background-repeat'     => 'no-repeat',
 			'background-position'   => 'center center',
@@ -340,7 +340,7 @@ new \Kirki\Field\Background(
 		'section'     => 'we-work-with',
 		'priority'     => 2,
 		'default'     => [
-			'background-color'      => 'rgba(20,20,20,.8)',
+			'background-color'      => '',
 			'background-image'      => '',
 			'background-repeat'     => 'no-repeat',
 			'background-position'   => 'center center',
@@ -418,7 +418,7 @@ new \Kirki\Field\Background(
 		'section'     => 'my-process',
 		'priority'     => 2,
 		'default'     => [
-			'background-color'      => 'rgba(20,20,20,.8)',
+			'background-color'      => '',
 			'background-image'      => '',
 			'background-repeat'     => 'no-repeat',
 			'background-position'   => 'center center',
@@ -502,7 +502,7 @@ new \Kirki\Field\Background(
 		'section'     => 'selected-work',
 		'priority'     => 2,
 		'default'     => [
-			'background-color'      => 'rgba(20,20,20,.8)',
+			'background-color'      => '',
 			'background-image'      => '',
 			'background-repeat'     => 'no-repeat',
 			'background-position'   => 'center center',
@@ -543,6 +543,23 @@ new \Kirki\Field\URL(
 		'priority' => 10,
 	]
 );
+function custom_portfolio_choices() {
+    // Retrieve the portfolio items dynamically
+    $portfolio_items = get_posts(array(
+        'post_type' => 'portfolio',
+        'posts_per_page' => -1,
+    ));
+
+    $choices = array();
+
+    foreach ($portfolio_items as $item) {
+        $choices[$item->ID] = get_the_title($item->ID);
+    }
+
+    return $choices;
+}
+$choices = custom_portfolio_choices();
+
 new \Kirki\Field\Select(
 	[
 		'settings'    => 'select_setting_2',
@@ -552,22 +569,138 @@ new \Kirki\Field\Select(
 		'default'     => 'option-3',
         'priority' => 4,
 		'multiple'    => 4,
-		'choices'     => [
-			'option-1' => esc_html__( 'Option 1', 'portfolio-me' ),
-			'option-2' => esc_html__( 'Option 2', 'portfolio-me' ),
-            'option-3' => esc_html__( 'Option 3', 'portfolio-me' ),
-            'option-4' => esc_html__( 'Option 4', 'portfolio-me' ),
-			'option-5' => esc_html__( 'Option 5', 'portfolio-me' ),
-            'option-6' => esc_html__( 'Option 60', 'portfolio-me' ),
-            'option-7' => esc_html__( 'Option 10', 'portfolio-me' ),
-			'option-20' => esc_html__( 'Option 20', 'portfolio-me' ),
-            'option-30' => esc_html__( 'Option 30', 'portfolio-me' ),
-            'option-40' => esc_html__( 'Option 40', 'portfolio-me' ),
-			'option-50' => esc_html__( 'Option 50', 'portfolio-me' ),
-            'option-60' => esc_html__( 'Option 60', 'portfolio-me' ),
-		],
+		'choices'     => $choices,
+	]
+);
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'cta title',
+		'label'    => esc_html__( 'Title', 'portfolio-me' ),
+		'section'  => 'selected-work',
+		'default'  => esc_html__( 'Title', 'portfolio-me' ),
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'cta desc',
+		'label'    => esc_html__( 'Description', 'portfolio-me' ),
+		'section'  => 'selected-work',
+		'default'  => esc_html__( 'Title', 'portfolio-me' ),
 	]
 );
 
 //selected work section controller end
+
+//footer start
+
+new \Kirki\Field\Checkbox_Switch(
+	[
+		'settings'    => 'switch_setting footer',
+		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
+		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
+		'section'     => 'footer_section',
+		'default'     => 'on',
+		'priority'    => 1,
+		'choices'     => [
+			'on'  => esc_html__( 'Enable', 'portfolio-me' ),
+			'off' => esc_html__( 'Disable', 'portfolio-me' ),
+		],
+	]
+);
+new \Kirki\Field\Background(
+	[
+		'settings'    => 'background setting Footer',
+		'label'       => esc_html__( 'Background Control', 'portfolio-me' ),
+		'description' => esc_html__( 'Background settings for Footer', 'portfolio-me' ),
+		'section'     => 'footer_section',
+		'priority'     => 2,
+		'default'     => [
+			'background-color'      => '',
+			'background-image'      => '',
+			'background-repeat'     => 'no-repeat',
+			'background-position'   => 'center center',
+			'background-size'       => 'cover',
+			'background-attachment' => 'scroll',
+		],
+		'transport'   => 'auto',
+		'output'      => [
+			[
+				'element' => '.site-footer',
+			],
+		],
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'title footer',
+		'label'    => esc_html__( 'Title', 'portfolio-me' ),
+		'section'  => 'footer_section',
+		'default'  => esc_html__( 'Title', 'portfolio-me' ),
+		'priority' => 3,
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'Button Title',
+		'label'    => esc_html__( 'Button Title', 'portfolio-me' ),
+		'section'  => 'footer_section',
+		'default'  => esc_html__( 'Title', 'portfolio-me' ),
+		'priority' => 3,
+	]
+);
+
+new \Kirki\Field\URL(
+	[
+		'settings' => 'Button Url',
+		'label'    => esc_html__( 'Button URL', 'portfolio-me' ),
+		'section'  => 'footer_section',
+		'priority' => 10,
+	]
+);
+
+new \Kirki\Field\Image(
+	[
+		'settings'    => 'image_setting_url for footer Person',
+		'label'       => esc_html__( 'Person Image', 'portfolio-me' ),
+		'description' => esc_html__( 'Image URL', 'kirki' ),
+		'section'     => 'footer_section',
+		'default'     => '',
+	]
+);
+
+//footer end
+
+new \Kirki\Field\Checkbox_Switch(
+	[
+		'settings'    => 'switch_setting footer',
+		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
+		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
+		'section'     => 'general_setting_section',
+		'default'     => 'on',
+		'priority'    => 1,
+		'choices'     => [
+			'on'  => esc_html__( 'Enable', 'portfolio-me' ),
+			'off' => esc_html__( 'Disable', 'portfolio-me' ),
+		],
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'Button Title',
+		'label'    => esc_html__( 'Button Title', 'portfolio-me' ),
+		'section'  => 'general_setting_section',
+		'default'  => esc_html__( 'Title', 'portfolio-me' ),
+		'priority' => 2,
+	]
+);
+
+new \Kirki\Field\URL(
+	[
+		'settings' => 'Button Url',
+		'label'    => esc_html__( 'Button URL', 'portfolio-me' ),
+		'section'  => 'general_setting_section',
+		'priority' => 3,
+	]
+);
 ?>
