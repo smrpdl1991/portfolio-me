@@ -669,6 +669,26 @@ new \Kirki\Field\Image(
 	]
 );
 
+new \Kirki\Field\Text(
+	[
+		'settings' => 'View More Button Text',
+		'label'    => esc_html__( 'View More Button Text', 'portfolio-me' ),
+		'section'  => 'selected-work',
+		'default'  => esc_html__( 'View More Button Text', 'portfolio-me' ),
+		'priority' => 3,
+	]
+);
+
+new \Kirki\Field\URL(
+	[
+		'settings' => 'More View Button Link',
+		'label'    => esc_html__( 'View More Button Link', 'portfolio-me' ),
+		'section'  => 'selected-work',
+		'default'  => 'View More Button Link',
+		'priority' => 10,
+	]
+);
+
 //footer end
 
 new \Kirki\Field\Checkbox_Switch(

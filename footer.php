@@ -15,9 +15,14 @@
         <div class="container">
             <section class="footer-cta">
                 <div class="call-to-action">
-                    <figure>
-                        <img src="assets/image/ketan.png" alt="Ketan Maharjan">
-                    </figure> Let’s talk about a project, collaboration or an idea you may have
+                    <h2>
+                        <div class="figure-wrap support">
+                        <figure>
+                            <img src="assets/image/ketan.png" alt="Ketan Maharjan">
+                        </figure> <span class="online-check"></span></div>Let’s talk about a project, collaboration or an idea you may have
+                        
+                        
+                    </h2>
                 </div>
                 <div class="bttn-wrap">
                     <a href="mailTo:" class="bttn bttn-black bttn-small">Lets get in touch</a>

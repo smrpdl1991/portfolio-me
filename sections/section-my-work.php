@@ -44,8 +44,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="view-more-bttn">
+                    <a href="" class="bttn">View More</a>
+                </div>
                 <div class="see-more">
-                    <p>Want to see more? <span> Reach out to me at <a href="mailTo:contact@todordimov.com">contact@todordimov.com</a>  </span></p> 
+                    <h2>Want to see more? </h2><span> Reach out to me at <a href="mailTo:contact@todordimov.com">contact@todordimov.com</a>  </span>
                 </div>
             </div>
         </section>

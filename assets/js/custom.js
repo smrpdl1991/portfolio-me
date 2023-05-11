@@ -32,5 +32,10 @@ jQuery(document).ready(function($) {
         $projectInfo.fadeOut();
       });
     });
+
+    $(".accordian-title .icon").on('click', function(){
+      $(this).closest('.item').toggleClass('active');
+      $(this).closest('.item').find('.desc').slideToggle();
+    })
   });
   

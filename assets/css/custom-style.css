@@ -53,7 +53,7 @@
         margin-right:30px;
 }
 .section-about{
-    padding:50px 0;
+    padding:80px 0;
 }
 .section-about .section-wrap{
     display: -webkit-box;
@@ -110,7 +110,7 @@
     transform: rotateZ(135deg);
 }
 .section-education{
-    padding:50px 0;
+    padding:80px 0;
 }
 .section-education .item{
     display: -webkit-box;
@@ -148,7 +148,7 @@
     margin-bottom: 7px;
 }
 .section-skills{
-    padding:50px 0;
+    padding:80px 0;
 }
 .section-skills .heading,
 .section-my-work .heading{
@@ -225,7 +225,7 @@ gap:100px;
 -webkit-box-pack:center;
     -ms-flex-pack:center;
         justify-content:center;
-        padding-top:50px;
+        padding-top:100px;
 }
 .skill-item{
     text-align: center;
@@ -253,7 +253,7 @@ gap:100px;
     transform: scale(1.05);
 }
 .section-we-work-with{
-    padding:50px 0;
+    padding:80px 0;
 }
 .section-we-work-with .section-wrap{
     display: -webkit-box;
@@ -283,7 +283,7 @@ gap:100px;
     max-width: 360px;
 }
 .section-my-process{
-    padding:50px 0;
+    padding:80px 0;
 }
 .section-my-process .section-wrap{
     display: -webkit-box;
@@ -319,8 +319,11 @@ gap:100px;
     top:0;
     right:0;
 }
+.item .icon{
+    cursor:pointer;
+}
 .section-my-work{
-    padding:50px 0;
+    padding:80px 0;
     overflow: hidden;
 }
 .work-item{
@@ -343,7 +346,6 @@ gap:100px;
 .project-info{
     position: absolute;
     display: none;
-
 }
 .project-info a{
     width: 300px;
@@ -352,4 +354,137 @@ gap:100px;
     border-radius: 10px;
     display: block;
 }
+.section-my-work .view-more-bttn{
+    text-align: center;
+    margin-top:50px;
+}
+.section-my-work  .see-more{
+    padding:100px 0 0;
+    text-align: center;
+}
+.section-my-work  .see-more h2{
+    margin:0 0 7px;
+    line-height: 1;
+}
+.section-my-work  .see-more span{
+    display: block;
+}
+.cross svg{
+    width:23px;
+    height:23px;
+}
+.experience-wrap .desc, .section-my-process .desc{
+    display: none;
+}
+.section-my-process .item h4{
+    margin-bottom:0;
+}
+.section-my-process .item .desc{
+    margin-top:30px;
+}
+.item.active .icon .cross,
+.item .icon .plus{
+    display:block;
+}
+.item.active .icon .plus,
+.item .icon .cross{
+    display: none;
+}
+.footer-cta{
+    padding:80px 0;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+-ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+-webkit-box-align:start;
+    -ms-flex-align:start;
+        align-items:flex-start;
+        margin:0 -15px;
+}
+.figure-wrap.support{
+    position: absolute;
+    left:0;
+    top:-10px;
+}
+.footer-cta .call-to-action figure{
+    width:104px;
+    height:104px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.footer-cta .call-to-action figure img{
+    width:104px;
+    height:104px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: top center;
+}
+.footer-cta .call-to-action  span.online-check{
+    width: 30px;
+    height: 30px;
+    background-color: #ff000f;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 4px;
+}
+.footer-cta .call-to-action h2{
+    text-indent: 130px;
+    position: relative;
+    margin:0;
+}
+.footer-cta .call-to-action,
+.footer-cta  .bttn-wrap{
+    margin: 0 15px;
+}
 
+.footer-cta .call-to-action{
+    width:calc(70% - 30px);
+}
+.footer-cta  .bttn-wrap{
+    width:calc(30% - 30px);
+    text-align: right;
+}
+.footer-bottom{
+    border-top:2px solid #000;
+    padding:40px 0;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+-ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+
+}
+.footer-bottom > div{
+    width:50%;
+}
+.footer-bottom > div:nth-of-type(1){
+    text-align: left;
+    padding-right:15px;
+    font-size: 20px;
+}
+.footer-bottom > div:nth-of-type(2){
+    text-align: right;
+    padding-left:15px;
+}
+.footer-navigation ul{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    gap:40px;
+    margin:0;
+    padding:0;
+    list-style: none;
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+        justify-content:end;
+}
+.footer-navigation ul a{
+    text-decoration: none;
+    font-size: 20px;
+}
