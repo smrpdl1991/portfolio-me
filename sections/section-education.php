@@ -1,28 +1,26 @@
+<?php if(true == get_theme_mod( 'education_switch_setting', 'on')) { ?>
 <section class="section-education">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="section-wrap">
-                    <div class="item">
-                        <div class="time-spent">2020-2021</div>
-                        <div class="item-content">
-                            <h4>Carnegie Mellon University</h4>
-                            <p>Master’s in Human-Computer Interaction</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="time-spent">2020-2021</div>
-                        <div class="item-content">
-                            <h4>Carnegie Mellon University</h4>
-                            <p>Master’s in Human-Computer Interaction</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="time-spent">2020-2021</div>
-                        <div class="item-content">
-                            <h4>Carnegie Mellon University</h4>
-                            <p>Master’s in Human-Computer Interaction</p>
-                        </div>
+    <div class="container">
+        <?php if ( get_theme_mod( 'edu_title' ) ) { ?>
+            <h2 class="section-title">
+                <?php echo esc_html( get_theme_mod( 'edu_title' ) ); ?>
+            </h2>
+        <?php } ?>
+        <?php
+        $education_item_settings = get_theme_mod( 'education_list', array() );
+        ?>
+        <div class="section-wrap">
+            <?php foreach ( $education_item_settings as $setting ) : ?>
+                <div class="item">
+                    <div class="time-spent"><?php echo $setting['date']; ?></div>
+                    <div class="item-content">
+                        <h4><?php echo $setting['text']; ?></h4>
+                        <p><?php echo $setting['desc']; ?></p>
                     </div>
                 </div>
-            </div>
-        </section>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<?php } ?>

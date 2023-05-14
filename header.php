@@ -47,9 +47,13 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 				<div class="navbar">
-					<div class="header-information">
-						<a href="" class="bttn bttn-black bttn-large">Contact Me</a>
-					</div>
+					<?php if ( true == get_theme_mod( 'header_button_switch', 'on' ) ) : ?>
+						<div class="header-information">
+							<a href="<?php echo esc_html(get_theme_mod( 'header_button_url' )) ?>" class="bttn bttn-black bttn-large">
+								<?php echo esc_html(get_theme_mod( 'header_button_text' )) ?>
+							</a>
+						</div>
+					<?php endif; ?>
 					<nav id="site-navigation" class="main-navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'portfolio-me' ); ?></button>
 						<?php
@@ -64,6 +68,5 @@
 				</div>
 			</div>
 		</div>
-        <?php echo get_theme_mod('footer2'); ?>
 	</header><!-- #masthead -->
 <div class="site-content">

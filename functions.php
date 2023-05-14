@@ -50,8 +50,10 @@ function portfolio_me_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'portfolio-me' ),
+			'menu-2' => esc_html__( 'FooterMenu', 'portfolio-me' ),
 		)
 	);
+
 
 	/*
 		* Switch default core markup for search form, comment form, and comments

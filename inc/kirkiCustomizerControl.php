@@ -4,7 +4,7 @@
 
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting',
+		'settings'    => 'about_switch_setting',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'aboutus_id',
@@ -71,7 +71,7 @@ new \Kirki\Field\Background(
 
 new \Kirki\Field\Textarea(
 	[
-		'settings'    => 'descrition',
+		'settings'    => 'about_descrition',
 		'label'       => esc_html__( 'Description Area', 'portfolio-me' ),
 		'section'     => 'aboutus_id',
 		'default'     => esc_html__( 'Desciption Area', 'portfolio-me' ),
@@ -88,7 +88,7 @@ new \Kirki\Field\Textarea(
 
 new \Kirki\Field\URL(
 	[
-		'settings' => 'url_setting',
+		'settings' => 'about_url_setting',
 		'label'    => esc_html__( 'Icon Link To', 'portfolio-me' ),
 		'section'  => 'aboutus_id',
 		'default'  => '#section-my-work',
@@ -101,7 +101,7 @@ new \Kirki\Field\URL(
 
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting2',
+		'settings'    => 'education_switch_setting',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'education_id',
@@ -138,7 +138,7 @@ new \Kirki\Field\Background(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'title setting',
+		'settings' => 'edu_title',
 		'label'    => esc_html__( 'Title', 'portfolio-me' ),
 		'section'  => 'education_id',
 		'default'  => esc_html__( 'Education', 'portfolio-me' ),
@@ -148,7 +148,7 @@ new \Kirki\Field\Text(
 
 new \Kirki\Field\Repeater(
 	[
-		'settings'     => 'education list',
+		'settings'     => 'education_list',
 		'label'        => esc_html__( 'Education Gained', 'portfolio-me' ),
 		'section'      => 'education_id',
 		'priority'     => 10,
@@ -185,7 +185,7 @@ new \Kirki\Field\Repeater(
 // section-skills Controller start
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting3',
+		'settings'    => 'switch_setting_skills',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'Experience_id',
@@ -222,7 +222,7 @@ new \Kirki\Field\Background(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'title setting for experience',
+		'settings' => 'title_experience',
 		'label'    => esc_html__( 'Title', 'portfolio-me' ),
 		'section'  => 'Experience_id',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
@@ -231,7 +231,7 @@ new \Kirki\Field\Text(
 );
 new \Kirki\Field\Textarea(
 	[
-		'settings'    => 'textarea_setting',
+		'settings'    => 'desc_experience',
 		'label'       => esc_html__( 'Description', 'portfolio-me' ),
 		'section'     => 'Experience_id',
 		'default'     => esc_html__( 'Description', 'portfolio-me' ),
@@ -304,7 +304,7 @@ new \Kirki\Field\Repeater(
 				'description' => esc_html__( 'Image', 'portfolio-me' ),
 				'default'     => '',
 			],
-			'desc'    => [
+			'link'    => [
 				'type'        => 'url',
 				'label'       => esc_html__( 'Link', 'portfolio-me' ),
 				'description' => esc_html__( 'Link', 'portfolio-me' ),
@@ -314,13 +314,10 @@ new \Kirki\Field\Repeater(
 	]
 );
 // section-skills Controller end
-//section we work with controller start
-
-//section we work with controller end
 //we-work-with section controller start
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting4',
+		'settings'    => 'switch_we_work-setting',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'we-work-with',
@@ -357,7 +354,7 @@ new \Kirki\Field\Background(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'title setting',
+		'settings' => 'title_work_with',
 		'label'    => esc_html__( 'Title', 'portfolio-me' ),
 		'section'  => 'we-work-with',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
@@ -398,7 +395,7 @@ new \Kirki\Field\Repeater(
 
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting5',
+		'settings'    => 'switch_setting_process',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'my-process',
@@ -435,7 +432,7 @@ new \Kirki\Field\Background(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'title setting of process',
+		'settings' => 'title_process',
 		'label'    => esc_html__( 'Title', 'portfolio-me' ),
 		'section'  => 'my-process',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
@@ -444,7 +441,7 @@ new \Kirki\Field\Text(
 );
 new \Kirki\Field\Textarea(
 	[
-		'settings'    => 'textarea_setting of my-process',
+		'settings'    => 'process_desc',
 		'label'       => esc_html__( 'Textarea Control', 'portfolio-me' ),
 		'section'     => 'my-process',
 		'default'     => esc_html__( 'This is a default value', 'portfolio-me' ),
@@ -452,7 +449,7 @@ new \Kirki\Field\Textarea(
 );
 new \Kirki\Field\Repeater(
 	[
-		'settings'     => 'my-process-setting',
+		'settings'     => 'my-process-repeater',
 		'label'        => esc_html__( 'my-process List', 'portfolio-me' ),
 		'section'      => 'my-process',
 		'priority'     => 10,
@@ -482,7 +479,7 @@ new \Kirki\Field\Repeater(
 //selected work section controller start
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting6',
+		'settings'    => 'selected_work_switch',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'selected-work',
@@ -519,7 +516,7 @@ new \Kirki\Field\Background(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'title setting of work',
+		'settings' => 'selected_work_title',
 		'label'    => esc_html__( 'Title', 'portfolio-me' ),
 		'section'  => 'selected-work',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
@@ -528,19 +525,29 @@ new \Kirki\Field\Text(
 );
 new \Kirki\Field\Textarea(
 	[
-		'settings'    => 'textarea_setting of my work',
-		'label'       => esc_html__( 'Textarea Control', 'portfolio-me' ),
+		'settings'    => 'selected_work_desc',
+		'label'       => esc_html__( 'Selected work descriptions', 'portfolio-me' ),
 		'section'     => 'selected-work',
 		'default'     => esc_html__( 'This is a default value', 'portfolio-me' ),
+		'priority' => 4,
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'selected_work_view_more_label',
+		'label'    => esc_html__( 'All Work Button Label', 'portfolio-me' ),
+		'section'  => 'selected-work',
+		'default'  => '',
+		'priority' => 6,
 	]
 );
 new \Kirki\Field\URL(
 	[
-		'settings' => 'More View',
-		'label'    => esc_html__( 'Button Link', 'portfolio-me' ),
+		'settings' => 'selected_work_view_more_link',
+		'label'    => esc_html__( 'All Work Button Link', 'portfolio-me' ),
 		'section'  => 'selected-work',
 		'default'  => '',
-		'priority' => 10,
+		'priority' => 7,
 	]
 );
 function custom_portfolio_choices() {
@@ -562,12 +569,12 @@ $choices = custom_portfolio_choices();
 
 new \Kirki\Field\Select(
 	[
-		'settings'    => 'select_setting_2',
+		'settings'    => 'selected_work_select',
 		'label'       => esc_html__( 'Select the portfolio items', 'portfolio-me' ),
 		'description' => esc_html__( 'Multiselect example', 'portfolio-me' ),
 		'section'     => 'selected-work',
 		'default'     => 'option-3',
-        'priority' => 4,
+        'priority' => 5,
 		'multiple'    => 4,
 		'choices'     => $choices,
 	]
@@ -575,18 +582,34 @@ new \Kirki\Field\Select(
 
 new \Kirki\Field\Text(
 	[
-		'settings' => 'cta title',
-		'label'    => esc_html__( 'Title', 'portfolio-me' ),
+		'settings' => 'cta_title_work',
+		'label'    => esc_html__( ' CTA Title', 'portfolio-me' ),
 		'section'  => 'selected-work',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
 	]
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'cta desc',
-		'label'    => esc_html__( 'Description', 'portfolio-me' ),
+		'settings' => 'cta_desc_work',
+		'label'    => esc_html__( 'CTA Description', 'portfolio-me' ),
 		'section'  => 'selected-work',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'cta_desc_link_label',
+		'label'    => esc_html__( 'CTA link label', 'portfolio-me' ),
+		'section'  => 'selected-work',
+		'default'  => esc_html__( 'smrpdl1991@gmail.com', 'portfolio-me' ),
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'cta_desc_link',
+		'label'    => esc_html__( 'CTA link', 'portfolio-me' ),
+		'section'  => 'selected-work',
+		'default'  => esc_html__( 'mailTO:smrpdl1991@gmail.com', 'portfolio-me' ),
 	]
 );
 
@@ -596,7 +619,7 @@ new \Kirki\Field\Text(
 
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting footer',
+		'settings'    => 'switch_setting_for_footer',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'footer_section',
@@ -633,7 +656,7 @@ new \Kirki\Field\Background(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'title footer',
+		'settings' => 'title_footer',
 		'label'    => esc_html__( 'Title', 'portfolio-me' ),
 		'section'  => 'footer_section',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
@@ -642,7 +665,7 @@ new \Kirki\Field\Text(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'Button Title',
+		'settings' => 'footer_button_label',
 		'label'    => esc_html__( 'Button Title', 'portfolio-me' ),
 		'section'  => 'footer_section',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
@@ -650,9 +673,9 @@ new \Kirki\Field\Text(
 	]
 );
 
-new \Kirki\Field\URL(
+new \Kirki\Field\Text(
 	[
-		'settings' => 'Button Url',
+		'settings' => 'footer_button_url',
 		'label'    => esc_html__( 'Button URL', 'portfolio-me' ),
 		'section'  => 'footer_section',
 		'priority' => 10,
@@ -661,7 +684,7 @@ new \Kirki\Field\URL(
 
 new \Kirki\Field\Image(
 	[
-		'settings'    => 'image_setting_url for footer Person',
+		'settings'    => 'footer_profile_image',
 		'label'       => esc_html__( 'Person Image', 'portfolio-me' ),
 		'description' => esc_html__( 'Image URL', 'kirki' ),
 		'section'     => 'footer_section',
@@ -669,31 +692,12 @@ new \Kirki\Field\Image(
 	]
 );
 
-new \Kirki\Field\Text(
-	[
-		'settings' => 'View More Button Text',
-		'label'    => esc_html__( 'View More Button Text', 'portfolio-me' ),
-		'section'  => 'selected-work',
-		'default'  => esc_html__( 'View More Button Text', 'portfolio-me' ),
-		'priority' => 3,
-	]
-);
-
-new \Kirki\Field\URL(
-	[
-		'settings' => 'More View Button Link',
-		'label'    => esc_html__( 'View More Button Link', 'portfolio-me' ),
-		'section'  => 'selected-work',
-		'default'  => 'View More Button Link',
-		'priority' => 10,
-	]
-);
-
 //footer end
+//for header button 
 
 new \Kirki\Field\Checkbox_Switch(
 	[
-		'settings'    => 'switch_setting footer',
+		'settings'    => 'header_button_switch',
 		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
 		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
 		'section'     => 'general_setting_section',
@@ -707,7 +711,7 @@ new \Kirki\Field\Checkbox_Switch(
 );
 new \Kirki\Field\Text(
 	[
-		'settings' => 'Button Title',
+		'settings' => 'header_button_text',
 		'label'    => esc_html__( 'Button Title', 'portfolio-me' ),
 		'section'  => 'general_setting_section',
 		'default'  => esc_html__( 'Title', 'portfolio-me' ),
@@ -717,10 +721,11 @@ new \Kirki\Field\Text(
 
 new \Kirki\Field\URL(
 	[
-		'settings' => 'Button Url',
+		'settings' => 'header_button_url',
 		'label'    => esc_html__( 'Button URL', 'portfolio-me' ),
 		'section'  => 'general_setting_section',
 		'priority' => 3,
 	]
 );
+//for header button end
 ?>
