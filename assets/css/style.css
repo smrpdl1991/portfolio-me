@@ -390,6 +390,16 @@ textarea {
 	line-height: 1.5;
 	font-weight: 400;
 }
+@media screen and (max-width: 992px){
+	body,
+	button,
+	input,
+	select,
+	optgroup,
+	textarea{
+		font-size: 18px;
+	}
+}
 
 h1,
 h2,
@@ -419,6 +429,34 @@ h5{
 }
 h6{
 	font-size: 28px;
+}
+@media screen and (max-width: 992px) {
+	h1{
+		font-size: 50px;
+	}
+	h2{
+		font-size: 40px;
+	}
+	h3{
+		font-size: 36px;
+	}
+	h4{
+		font-size: 30px;
+	}
+	h5{
+		font-size: 28px;
+	}
+	h6{
+		font-size: 20px;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin:0 0 15px
+	}
 }
 
 p {
@@ -608,6 +646,8 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
+	width: 100%;
+	height: 40px;
 }
 
 input[type="text"]:focus,
@@ -631,10 +671,14 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
+	width: 100%;
+	height: 40px;
 }
 
 textarea {
 	width: 100%;
+	width: 100%;
+	height: 150px;
 }
 
 /*--------------------------------------------------------------

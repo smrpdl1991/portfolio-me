@@ -26,10 +26,10 @@
                                         echo '<img src="' . esc_url( $image_url ) . '" alt="My Image">';
                                     }
                                 ?>
-                            </figure> <span class="online-check"></span></div>
-                            <?php echo esc_html(get_theme_mod( 'title_footer' )) ?>
-                            
-                            
+                            </figure> 
+                            <span class="online-check" style="background-color:<?php echo get_theme_mod( 'online_check', '#ff000f' ); ?>"></span>
+                        </div>
+                        <?php echo esc_html(get_theme_mod( 'title_footer' )) ?>
                         </h2>
                     </div>
                     <div class="bttn-wrap">

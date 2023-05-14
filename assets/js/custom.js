@@ -1,5 +1,9 @@
 jQuery(document).ready(function($) {
 
+  $('.menu-toggle').on('click', function(){
+    $('.main-navigation ul').slideToggle();
+  });
+
   function displaySpansWithInterval() {
     var title = document.querySelector('.section-title');
     var spans = title.getElementsByTagName('span');
@@ -26,25 +30,6 @@ jQuery(document).ready(function($) {
   
   displaySpansWithInterval();
   
-  // Define an array of background colors or images
-// var backgrounds = [
-//   '#ffffff',
-//   '#f1f1f1',
-//   '#f9f9f9'
-// ];
-
-// function getRandomBackground() {
-//   var randomIndex = Math.floor(Math.random() * backgrounds.length);
-//   return backgrounds[randomIndex];
-// }
-
-// function updateBackground() {
-//   var body = document.body;
-//   var randomBackground = getRandomBackground();
-//   body.style.backgroundColor = randomBackground;
-// }
-
-// setInterval(updateBackground, 2000); 
 
   
     $(".work-item").each(function() {
@@ -84,6 +69,8 @@ jQuery(document).ready(function($) {
     $(".accordian-title .icon").on('click', function(){
       $(this).closest('.item').toggleClass('active');
       $(this).closest('.item').find('.desc').slideToggle();
-    })
+    });
+
+    
   });
   

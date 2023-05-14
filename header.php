@@ -55,7 +55,9 @@
 						</div>
 					<?php endif; ?>
 					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'portfolio-me' ); ?></button>
+						<span class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+							<svg width='30' height='30' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu"><g data-name="Layer 2"><g data-name="menu"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></svg>
+						</span>
 						<?php
 						wp_nav_menu(
 							array(

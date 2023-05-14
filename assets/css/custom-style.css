@@ -1,3 +1,6 @@
+html,body {
+    scroll-behavior: smooth;
+}
 body{
     transition: background-color 0.5s ease-in-out;
 }
@@ -78,6 +81,16 @@ body{
     margin:0 15px;
     width: calc(30% - 30px);   
 }
+@media screen and (max-width: 840px) {
+    .section-about .section-left{
+        margin:0 15px 30px;
+        width: calc(100% - 30px);
+    }
+    .section-about .section-right{
+        margin:0 15px;
+        width: calc(100% - 30px);   
+    } 
+}
 .section-about h2{
     font-size:150px;
     line-height: 1.2;
@@ -87,6 +100,17 @@ body{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 992px){
+    .section-about h2{
+        font-size:50px;
+        height: auto;
+    }
+    .view-my-work a svg{
+        width:150px;
+        height: 150px;
+    }
 }
 
 .section-about h2 span:not(:first-child){
@@ -157,6 +181,16 @@ body{
         order:2;
         font-size:35px;
 }
+@media screen and (max-width: 768px) {
+    .section-education .item .time-spent + .item-content{
+        width: 100%;
+    }
+    .section-education .item .time-spent{
+        width: 100%;
+        text-align: left;
+        padding:0;
+    }
+}
 .section-education .item h4,
 .experience-wrap .item h4{
     margin-bottom: 7px;
@@ -183,7 +217,15 @@ body{
     margin:0 15px;
     width: calc(50% - 30px);
 }
-
+@media screen and (max-width:992px) {
+    .section-skills .heading > h2,
+    .section-skills .heading > div,
+    .section-my-work .heading > h2,
+    .section-my-work .heading > div{
+        margin:0 15px 15px;
+        width: calc(100% - 30px);
+    }
+}
 .desc p:last-child{
     margin-bottom:0;
 }
@@ -201,6 +243,9 @@ body{
         align-items:start;
         border-bottom:2px solid #D9D9D9;
 }
+.section-my-work .work-item{
+    padding-right: 70px;
+}
 .experience-wrap .item:first-child,
 .section-my-process .item:first-child,
 .section-my-work .work-item:first-child{
@@ -214,6 +259,17 @@ body{
     width:calc(70% - 30px);
     margin:0 15px;
 }
+@media screen and (max-width: 768px) {
+    .experience-wrap  .time-experienced{
+        width:calc(100% - 30px);
+        margin:0 15px 15px;
+    }
+    .experience-wrap  .content{
+        width:calc(100% - 30px);
+        margin:0 15px 15px;
+    }
+}
+
 .experience-wrap .desc{
     margin-top: 30px;
 }
@@ -286,6 +342,17 @@ gap:100px;
     border-right: 2px solid #d9d9d9;
     padding-left: 15px;;
 }
+@media screen and (max-width: 768px) {
+    .section-we-work-with .item{
+        width: calc(100% - 30px);
+        margin:0 15px 15px;
+        border-right: 0;
+        padding-left: 0;
+    }
+    .section-we-work-with .item h4, .section-we-work-with .item p{
+        max-width: 100%;
+    }
+}
 .section-we-work-with .item:nth-of-type(3n+1){
     padding-left: 0;
 }
@@ -313,6 +380,12 @@ gap:100px;
 .section-my-process .section-wrap > div{
     margin:0 15px;
     width: calc(50% - 30px);
+}
+@media screen and (max-width: 768px){
+    .section-my-process .section-wrap > div{
+        margin:0 15px 15px;
+        width: calc(100% - 30px);
+    }
 }
 .section-my-process .section-wrap > div:nth-child(1){
     padding-right: 15px;
@@ -421,6 +494,9 @@ gap:100px;
     left:0;
     top:-10px;
 }
+.footer-cta .call-to-action{
+    min-height: 104px;
+}
 .footer-cta .call-to-action figure{
     width:104px;
     height:104px;
@@ -435,20 +511,38 @@ gap:100px;
     border-radius: 50%;
     object-position: top center;
 }
+
 .footer-cta .call-to-action  span.online-check{
     width: 30px;
     height: 30px;
-    background-color: #ff000f;
     border-radius: 50%;
     display: block;
     position: absolute;
     top: 0px;
     right: 4px;
 }
+
 .footer-cta .call-to-action h2{
     text-indent: 130px;
     position: relative;
     margin:0;
+}
+@media screen and (max-width: 1024px) {
+    .footer-cta .call-to-action figure,
+    .footer-cta .call-to-action figure img{
+        width:60px;
+        height:60px;
+    }
+    .footer-cta .call-to-action  span.online-check{
+        width: 15px;
+        height: 15px;
+    }
+    .footer-cta .call-to-action h2{
+        text-indent: 75px;
+    }
+    .footer-cta .call-to-action{
+        min-height: 60px;
+    }
 }
 .footer-cta .call-to-action,
 .footer-cta  .bttn-wrap{
@@ -461,6 +555,16 @@ gap:100px;
 .footer-cta  .bttn-wrap{
     width:calc(30% - 30px);
     text-align: right;
+}
+@media screen and (max-width: 768px) {
+    .footer-cta .call-to-action{
+        width:calc(100% - 30px);
+        margin-bottom: 30px;
+    }
+    .footer-cta  .bttn-wrap{
+        width:calc(100% - 30px);
+        text-align: left;
+    }
 }
 .footer-bottom{
     border-top:2px solid #000;
@@ -475,6 +579,7 @@ gap:100px;
 .footer-bottom > div{
     width:50%;
 }
+
 .footer-bottom > div:nth-of-type(1){
     text-align: left;
     padding-right:15px;
@@ -501,4 +606,155 @@ gap:100px;
 .footer-navigation ul a{
     text-decoration: none;
     font-size: 20px;
+}
+.type-portfolio .heading-wrap{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr) 20px minmax(0, 1fr);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap:20px;
+    -webkit-box-align:end;
+    -ms-flex-align:end;
+        align-items:end;
+        margin-bottom:30px;
+}
+.type-portfolio .heading-wrap .heading{
+    -ms-grid-column-span: 9;
+    grid-column: span 9 / span 12;
+}
+.type-portfolio .heading-wrap .back-bttn{
+    -ms-grid-column-span: 3;
+    grid-column: span 3 / span 12;
+}
+.type-portfolio .heading-wrap .heading p:last-child{
+    margin:0;
+}
+@media screen and (max-width: 1024px) {
+    .type-portfolio .heading-wrap .heading,
+    .type-portfolio .heading-wrap .back-bttn{
+        -ms-grid-column-span: 12;
+        grid-column: span 12 / span 12;
+    }
+}
+.single .type-portfolio{
+    padding:80px 0;
+}
+.type-portfolio  .featured-image img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 614px;
+}
+.portfolio-archieve-section{
+    padding:80px 0;
+}
+.portfolio-archieve-section .portfolio-wrap{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    margin:0 -15px;
+}
+.portfolio-archieve-section .portfolio-wrap article{
+    width:calc(33.33% - 30px);
+    margin:0 15px 15px;
+}
+@media screen and (max-width: 768px) {
+    .footer-bottom > div{
+        width:100%;
+    }
+    .footer-bottom > div:nth-of-type(1),
+    .footer-bottom > div:nth-of-type(2){
+        padding:5px 0;
+        text-align: center;
+    }
+    .portfolio-archieve-section .portfolio-wrap article{
+        width:calc(100% - 30px);
+        margin:0 15px 40px;
+    }
+    .portfolio-archieve-section .portfolio-wrap article:last-child{
+        margin-bottom: 0;
+    }
+    .footer-navigation ul{
+        justify-content: center;
+    }
+}
+.portfolio-archieve-section figure{
+    width: 100%;
+    height:250px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+.portfolio-archieve-section figure img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+.portfolio-archieve-section article:hover figure img{
+    transform: scale(1.03);
+}
+.portfolio-archieve-section h3{
+    line-height: 1.2;
+}
+.portfolio-archieve-section .entry-content{
+    margin-top:0;
+}
+.single.single-post .site-content,
+.section-contact-us{
+    padding:80px 0;
+}
+.error-404{
+    padding:80px 0;
+}
+
+@media screen and (max-width: 992px){
+    .section-about,
+    .section-education,
+    .section-skills,
+    .section-we-work-with,
+    .section-my-process,
+    .section-my-work{
+        padding:40px 0;
+    }
+    .section-skills .heading, .section-my-work .heading{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 768px){
+    .site-header{
+        position: relative;
+    }
+    .site-title a{
+        font-size: 24px;
+    }
+    .main-navigation ul{
+        position: absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background-color: #fff;
+    }
+    .main-navigation ul li{
+        display: block;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .main-navigation ul li a{
+        padding: 7px 15px;
+        display: block;
+    }
+    .header-information + .main-navigation{
+        margin-right: 15px;
+    }
+    .site-branding{
+        width: auto;
+        margin-right: auto;
+    }
+    .site-header .navbar{
+        margin-left: 0;
+    }
+    .header-information .bttn{
+        font-size: 16px;
+        padding:7px 10px;
+    }
 }

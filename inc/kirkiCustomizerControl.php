@@ -672,7 +672,14 @@ new \Kirki\Field\Text(
 		'priority' => 3,
 	]
 );
-
+new \Kirki\Field\Color(
+	[
+		'settings'    => 'online_check',
+		'label'       => __( 'Color Control (hex only)', 'portfolio-me' ),
+		'description' => esc_html__( 'online-check Regular color control, no alpha channel.', 'portfolio-me' ),
+		'section'     => 'footer_section',
+	]
+);
 new \Kirki\Field\Text(
 	[
 		'settings' => 'footer_button_url',
