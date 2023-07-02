@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Homepage
- * Description: A custom Homepage template.
+ * Template Name: Theme
+ * Description: A custom Theme template.
  *
  * @package Portfolio Me
  */
@@ -12,11 +12,6 @@ get_header();
     <main id="main" class="site-main">
         <?php
             $files = array(
-                'section-about.php',
-                'section-education.php',
-                'section-skills.php',
-                'section-we-work-with.php',
-                'section-my-process.php',
                 'section-theme.php',
                 'section-my-work.php',
             );

@@ -314,6 +314,122 @@ new \Kirki\Field\Repeater(
 	]
 );
 // section-skills Controller end
+// section-themes Controller start
+new \Kirki\Field\Checkbox_Switch(
+	[
+		'settings'    => 'switch_themes-setting',
+		'label'       => esc_html__( 'Enable/Disable', 'portfolio-me' ),
+		'description' => esc_html__( 'ON/OFF', 'portfolio-me' ),
+		'section'     => 'section-themes',
+		'default'     => 'on',
+		'priority'    => 1,
+		'choices'     => [
+			'on'  => esc_html__( 'Enable', 'portfolio-me' ),
+			'off' => esc_html__( 'Disable', 'portfolio-me' ),
+		],
+	]
+);
+new \Kirki\Field\Background(
+	[
+		'settings'    => 'background_setting_themes',
+		'label'       => esc_html__( 'Background Control', 'portfolio-me' ),
+		'description' => esc_html__( 'Background settings for section', 'portfolio-me' ),
+		'section'     => 'section-themes',
+		'priority'     => 2,
+		'default'     => [
+			'background-color'      => '',
+			'background-image'      => '',
+			'background-repeat'     => 'no-repeat',
+			'background-position'   => 'center center',
+			'background-size'       => 'cover',
+			'background-attachment' => 'scroll',
+		],
+		'transport'   => 'auto',
+		'output'      => [
+			[
+				'element' => '.section-themes',
+			],
+		],
+	]
+);
+new \Kirki\Field\Text(
+	[
+		'settings' => 'title_themes',
+		'label'    => esc_html__( 'Title', 'portfolio-me' ),
+		'section'  => 'section-themes',
+		'default'  => esc_html__( 'Title', 'portfolio-me' ),
+		'priority' => 3,
+	]
+);
+new \Kirki\Field\Repeater(
+	[
+		'settings'     => 'themes-setting',
+		'label'        => esc_html__( 'Our Themes List', 'portfolio-me' ),
+		'section'      => 'section-themes',
+		'priority'     => 10,
+		'row_label'    => [
+			'type'  => 'field',
+			'value' => esc_html__( 'Themes', 'portfolio-me' ),
+			'field' => 'text',
+		],
+		'button_label' => esc_html__( '"Add new " ', 'portfolio-me' ),
+		'fields'       => [
+			'image'    => [
+				'type'        => 'image',
+				'label'       => esc_html__( 'Image', 'portfolio-me' ),
+				'description' => esc_html__( 'Upload an image', 'portfolio-me' ),
+				'default'     => '',
+			],
+			'title'   => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'Title', 'portfolio-me' ),
+				'description' => esc_html__( 'Title', 'portfolio-me' ),
+				'default'     => '',
+			],
+
+			'desc'    => [
+				'type'        => 'textarea',
+				'label'       => esc_html__( 'Description', 'portfolio-me' ),
+				'description' => esc_html__( 'Description', 'portfolio-me' ),
+				'default'     => '',
+			],
+
+			'cutprice'   => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'cutprice', 'portfolio-me' ),
+				'description' => esc_html__( 'Enter cutprice value', 'portfolio-me' ),
+				'default'     => '',
+			],
+			'price'   => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'price', 'portfolio-me' ),
+				'description' => esc_html__( 'Enter price value', 'portfolio-me' ),
+				'default'     => '',
+			],
+			
+			'detail'      => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'Detail Page', 'portfolio-me' ),
+				'description' => esc_html__( 'Enter a URL for detail page', 'portfolio-me' ),
+				'default'     => '',
+			],
+			'buy'      => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'Buy Now', 'portfolio-me' ),
+				'description' => esc_html__( 'Enter a URL', 'portfolio-me' ),
+				'default'     => '',
+			],
+			'buy_id'      => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'Buy Now id', 'portfolio-me' ),
+				'description' => esc_html__( 'Enter Buy ID', 'portfolio-me' ),
+				'default'     => '',
+			],
+			
+		],
+	]
+);
+//section-themes Controller end
 //we-work-with section controller start
 new \Kirki\Field\Checkbox_Switch(
 	[
@@ -389,7 +505,6 @@ new \Kirki\Field\Repeater(
 		],
 	]
 );
-
 //we-work-with section controller end
 //my-process section controller start
 

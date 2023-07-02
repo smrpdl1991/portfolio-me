@@ -21,9 +21,11 @@
                             <figure>
                                 <?php 
                                     $image_id = get_theme_mod( 'footer_profile_image' ); 
+                                    // var_dump('image-id', $image_id);
                                     $image_url = wp_get_attachment_image_url( $image_id, 'full' ); 
-                                    if ( $image_url ) {
-                                        echo '<img src="' . esc_url( $image_url ) . '" alt="My Image">';
+                                    // var_dump('image-id', $image_url);
+                                    if ( $image_id ) {
+                                        echo '<img src="' . esc_url( $image_id ) . '" alt="My Image">';
                                     }
                                 ?>
                             </figure> 
@@ -41,7 +43,7 @@
                 <div class="footer-bottom">
                     <div class="site-info">
                         <?php
-                            printf( esc_html__( '© 2023 All Rights Reserved. Design & Coded with ❤️' ));
+                            printf( esc_html__( '© 2023 All Rights Reserved.' ));
                         ?>
                     </div><!-- .site-info -->
                     <div class="footer-menu">

@@ -57,12 +57,22 @@ new \Kirki\Section(
 );
 
 new \Kirki\Section(
+	'section-themes',
+	[
+		'title'       => esc_html__( 'Section Thems', 'portfolio-me' ),
+		'description' => esc_html__( 'Themes and Plugins', 'portfolio-me' ),
+		'panel'       => 'panel_id',
+		'priority'    => 4,
+	]
+);
+
+new \Kirki\Section(
 	'we-work-with',
 	[
 		'title'       => esc_html__( 'What We Do', 'portfolio-me' ),
 		'description' => esc_html__( 'Design , Development and otheres', 'portfolio-me' ),
 		'panel'       => 'panel_id',
-		'priority'    => 4,
+		'priority'    => 5,
 	]
 );
 
@@ -72,7 +82,7 @@ new \Kirki\Section(
 		'title'       => esc_html__( 'My Process', 'portfolio-me' ),
 		'description' => esc_html__( 'Process of work', 'portfolio-me' ),
 		'panel'       => 'panel_id',
-		'priority'    => 5,
+		'priority'    => 6,
 	]
 );
 
@@ -82,7 +92,7 @@ new \Kirki\Section(
 		'title'       => esc_html__( 'Selected Work', 'portfolio-me' ),
 		'description' => esc_html__( 'Selected Work', 'portfolio-me' ),
 		'panel'       => 'panel_id',
-		'priority'    => 6,
+		'priority'    => 7,
 	]
 );
 

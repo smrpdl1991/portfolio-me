@@ -3,23 +3,25 @@
             <div class="container">
                 <div class="section-wrap">
                     <div class="section-left">
-                        <?php 
-                            $about_title_settings = get_theme_mod( 'about-title', array() );
-                            if($about_title_settings) {
-                        ?>
-                            <h2 class="section-title">
-                                <?php foreach ( $about_title_settings as $setting ) : ?>
-                                    <span>
-                                        <?php echo $setting['text_field']; ?>
-                                    </span>
-                                <?php endforeach; ?>
-                            </h2>
-                        <?php } ?>
-                        <?php if(get_theme_mod( 'about_descrition' )) { ?>
-                            <div class="desc">
-                                <p><?php echo esc_html( get_theme_mod( 'about_descrition' ) )?></p>
-                            </div>
-                        <?php } ?>
+                        <div class="section-left-wrap">
+                            <?php 
+                                $about_title_settings = get_theme_mod( 'about-title', array() );
+                                if($about_title_settings) {
+                            ?>
+                                <h2 class="section-title owl-carousel owl-theme">
+                                    <?php foreach ( $about_title_settings as $setting ) : ?>
+                                        <span>
+                                            <?php echo $setting['text_field']; ?>
+                                        </span>
+                                    <?php endforeach; ?>
+                                </h2>
+                            <?php } ?>
+                            <?php if(get_theme_mod( 'about_descrition' )) { ?>
+                                <div class="desc">
+                                    <p><?php echo esc_html( get_theme_mod( 'about_descrition' ) )?></p>
+                                </div>
+                            <?php } ?>
+                        </div>
                     </div>
                     <div class="section-right">
                        
